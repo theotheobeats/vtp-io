@@ -18,10 +18,17 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useState } from "react";
 
 const Navbar = () => {
 	const { setTheme } = useTheme();
 	const { theme } = useTheme();
+	const [isOpen, setIsOpen] = useState(false);
+
+	const handleSelect = () => {
+		setIsOpen(false);
+	};
+
 	useGSAP(() => {
 		gsap.to("#nav", {
 			opacity: 1,
@@ -135,29 +142,19 @@ const Navbar = () => {
 							</DropdownMenu>
 						</div>
 						<div>
-							<Popover>
-								<PopoverTrigger>
-									<MenuIcon className="text-slate-500 hover:text-black cursor-pointer" />
-								</PopoverTrigger>
-								<PopoverContent className="w-30 mr-4">
-									<div className="flex-col text-center justify-between">
-										<div className="mb-4">
-											<Link
-												href="/"
-												className="hover:bg-slate-100 px-10 py-2 rounded-xl text-xs">
-												Home
-											</Link>
-										</div>
-										<div>
-											<Link
-												href="/about"
-												className="hover:bg-slate-100 px-10 py-2 rounded-xl text-xs">
-												About
-											</Link>
-										</div>
-									</div>
-								</PopoverContent>
-							</Popover>
+							<DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+								<DropdownMenuTrigger asChild>
+									<MenuIcon />
+								</DropdownMenuTrigger>
+								<DropdownMenuContent align="end">
+									<DropdownMenuItem onSelect={handleSelect}>
+										<a href="/">Home</a>
+									</DropdownMenuItem>
+									<DropdownMenuItem onSelect={handleSelect}>
+										<a href="/about">About</a>
+									</DropdownMenuItem>
+								</DropdownMenuContent>
+							</DropdownMenu>
 						</div>
 					</div>
 				</div>
