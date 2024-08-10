@@ -16,13 +16,21 @@ import {
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
 	const { setTheme } = useTheme();
 	const { theme } = useTheme();
+	useGSAP(() => {
+		gsap.to("#nav", {
+			opacity: 1,
+			ease: "circ.in",
+		});
+	}, []);
 	return (
 		<>
-			<div className="hidden sm:md:lg:block">
+			<div className="hidden sm:md:lg:block opacity-0" id="nav">
 				{" "}
 				<NavigationMenu className="flex items-center mx-auto py-2 max-w-[40rem] w-full">
 					<NavigationMenuList className="flex items-center justify-between w-full outline-black mt-4 rounded-lg">

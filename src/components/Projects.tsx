@@ -1,12 +1,25 @@
+"use client";
+
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/constants";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Projects = () => {
+	useGSAP(() => {
+		gsap.to("#project", {
+			opacity: 1,
+			ease: "circ.in",
+			delay: 0.5,
+		});
+	}, []);
 	return (
-		<div className="max-w-[36rem] mx-auto mt-20 items-center sm:md:lg:px-0 sm:md:lg:text-left text-center pb-20">
+		<div
+			className="max-w-[36rem] mx-auto mt-20 items-center sm:md:lg:px-0 sm:md:lg:text-left text-center pb-20 opacity-0"
+			id="project">
 			<p className="text-center">
 				Notable <span className="underline">Projects</span>
 			</p>

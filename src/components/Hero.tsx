@@ -1,9 +1,25 @@
-
-import { ArrowUpRight, GithubIcon, Instagram, LinkedinIcon } from "lucide-react";
+"use client";
+import {
+	ArrowUpRight,
+	GithubIcon,
+	Instagram,
+	LinkedinIcon,
+} from "lucide-react";
 import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const Hero = () => {
+	useGSAP(() => {
+		gsap.to("#hero", {
+			opacity: 1,
+			ease: "circ.in",
+		});
+	}, []);
 	return (
-		<div className="mx-auto mt-20 max-w-[36rem] px-8 sm:md:lg:px-0 opacity-1">
+		<div
+			className="mx-auto mt-20 max-w-[36rem] px-8 sm:md:lg:px-0 opacity-0"
+			id="hero">
 			<h1 className="text-4xl">
 				halo! <span className="font-semibold">Theo</span> here.
 			</h1>
