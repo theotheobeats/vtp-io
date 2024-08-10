@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
 	return (
-		<div className="mx-auto mt-28 max-w-[36rem] px-8 sm:px-0 mb-12">
+		<div className="mx-auto mt-28 max-w-[36rem] px-8 sm:px-0 mb-20">
 			<div className="flex-col">
 				<div className="flex gap-16">
 					<span className="text-slate-400 items-center w-[5rem]">About</span>

@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const Projects = () => {
 	return (
-		<div className="max-w-[36rem] mx-auto mt-20 items-center sm:md:lg:px-0 sm:md:lg:text-left text-center">
+		<div className="max-w-[36rem] mx-auto mt-20 items-center sm:md:lg:px-0 sm:md:lg:text-left text-center pb-20">
 			<p className="text-center">
 				Notable <span className="underline">Projects</span>
 			</p>

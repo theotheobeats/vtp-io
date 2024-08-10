@@ -5,7 +5,7 @@ import {
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { HomeIcon, House, MenuIcon, Moon, MoonIcon, Sun } from "lucide-react";
+import { MenuIcon, Moon, MoonIcon, Sun } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
 	DropdownMenu,
@@ -96,11 +96,11 @@ const Navbar = () => {
 							className="dark:hidden"
 						/>
 						<Image
-							src="/images/logo-dark.png" 
+							src="/images/logo-dark.png"
 							width={65}
 							height={65}
 							alt="logo"
-							className="hidden dark:block" 
+							className="hidden dark:block"
 						/>
 					</Link>
 					<div className="flex gap-4 items-center">
