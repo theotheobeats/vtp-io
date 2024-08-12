@@ -25,4 +25,17 @@ export const projects = [
 			"shadcn",
 		],
 	},
+	{
+		name: "Insight AI",
+		description:
+			"AI chatbot purposely to chat with a website. A playaround with Upstash's rag-chat and vector API.",
+		image: "/projects/insight-ai.png",
+		url: "https://insight-ai-red.vercel.app/",
+		github: "https://github.com/theotheobeats/insight-ai",
+		tags: [
+			"nextjs",
+			"tailwindcss",
+			"upstash",
+		],
+	},
 ];
