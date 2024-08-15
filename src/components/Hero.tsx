@@ -48,7 +48,7 @@ const Hero = () => {
 					<Instagram className="w-5 h-5 text-slate-500 hover:text-black transition-all" />
 				</a>
 				<a
-					href="/resume"
+					href="https://drive.google.com/file/d/14lRFaIr5v2rl2xQ-y18SY6vUs06Ml6z5/view?usp=sharing"
 					className="flex bg-secondary rounded-lg px-2 hover:opacity-70 transition-all"
 					target="_blank">
 					<ArrowUpRight className="w-4 h-6 mr-[2px]" />{" "}
