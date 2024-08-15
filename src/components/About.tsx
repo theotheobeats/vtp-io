@@ -57,7 +57,7 @@ const About = () => {
 					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2">
 						<ConnectButton
 							link="valentinustheoprathama@gmail.com"
-							title="valentinustheoprathama@gmail.com"
+							title="Send me an email"
 							icon={<Mail size={14} />}
 						/>
 						<ConnectButton
