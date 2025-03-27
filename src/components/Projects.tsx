@@ -39,6 +39,7 @@ const Projects = () => {
 									url={project.url}
 									tags={project.tags}
 									github={project.github}
+									gallery={project.gallery}
 								/>
 							</CarouselItem>
 						))}
@@ -59,6 +60,7 @@ const Projects = () => {
 									url={project.url}
 									tags={project.tags}
 									github={project.github}
+									gallery={project.gallery}
 								/>
 							</CarouselItem>
 						))}
